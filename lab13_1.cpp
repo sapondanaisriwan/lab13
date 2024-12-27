@@ -37,11 +37,13 @@ void stat(const double source[], int length, double dest[])
     }
     mean = sum / length;
     geo = pow(geo, (1.0 / length));
+
     double temp = 0;
     for (int i = 0; i < length; i++)
     {
         temp += pow(source[i] - mean, 2);
     }
+
     sd = pow(temp / length, 0.5);
 
     dest[0] = mean;
